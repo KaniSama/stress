@@ -40,6 +40,8 @@ hp = max_hp;
 
 max_iframes = 80;
 iframes = max_iframes;
+
+padding = 2;
 </string>
           </argument>
         </arguments>
@@ -124,7 +126,9 @@ iframes = clamp(iframes, -1, 60);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(mainfont);
+            <string>offset = hp / max_hp;
+
+draw_set_font(mainfont);
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
@@ -133,8 +137,13 @@ draw_text(x, y, visible_text);
 
 draw_set_font(numerals);
 
-if (room == rm_main &amp;&amp; hp &lt; max_hp)
-    draw_text(x, y + CELL_H + 5, hp);
+if (room == rm_main &amp;&amp; hp &lt; max_hp &amp;&amp; hp &gt; 0) {
+    draw_set_color(c_black);
+    draw_rectangle(x + padding, y + CELL_H, x + CELL_W - padding, y + CELL_H + 2, false);
+    
+    draw_set_color(c_lime);
+    draw_rectangle(x + padding, y + CELL_H, x + padding + (CELL_W - padding) * offset, y + CELL_H + 2, false);
+}
     
 draw_self();
 

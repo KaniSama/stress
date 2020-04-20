@@ -59,6 +59,7 @@ parent = "null";
           <argument>
             <kind>1</kind>
             <string>parent.current_zombie = 0;
+parent.current_zombie2 = 0;
 
 repeat (10) {
     instance_create(x + 16, y + 16, particle);

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>current_zombie = 0;
+current_zombie2 = 0;
 </string>
           </argument>
         </arguments>
@@ -56,6 +57,10 @@ if (flower.stage &gt;= 2) {
             if (current_zombie == 0) {
                 current_zombie = instance_create(x, y, zombie);
                 current_zombie.parent = id;
+            }
+            if (current_zombie2 == 0 &amp;&amp; flower.stage &gt;= 5) {
+                current_zombie2 = instance_create(x, y, zombie);
+                current_zombie2.parent = id;
             }
         }
     }
