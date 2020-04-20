@@ -95,6 +95,8 @@ instance_destroy();
             draw_circle(player_menu.x + 16, player_menu.y + 16, rad, false);
         else if (instance_exists(player_settings))
             draw_circle(player_settings.x + 16, player_settings.y + 16, rad, false);
+        else if (instance_exists(room_exit_control))
+            draw_circle(room_exit_control.x + 16, room_exit_control.y + 16, rad, false);
         
         draw_set_blend_mode(bm_normal);
     surface_reset_target();

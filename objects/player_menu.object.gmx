@@ -65,7 +65,7 @@ for (i = 0; i &lt; w; i++) {
             instance_create(x+i*CELL_W, y-CELL_H, bord);
         }    
     
-        if (j == 0 || i == w div 2)
+        if (j == 0 &amp;&amp; i &gt;= w div 2 || i == w div 2)
             grid[#i, j] = instance_create(x+i*CELL_W, y+j*CELL_H, grid_cel);
         else 
             grid[#i, j] = 0;

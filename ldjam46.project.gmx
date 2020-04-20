@@ -36,6 +36,7 @@
   <fonts name="fonts">
     <font>fonts\mainfont</font>
     <font>fonts\numerals</font>
+    <font>fonts\game_over_font</font>
   </fonts>
   <objects name="objects">
     <objects name="menu">
@@ -44,6 +45,7 @@
       <object>objects\btn_settings</object>
       <object>objects\btn_menu</object>
       <object>objects\alert</object>
+      <object>objects\btn_switch_resolution</object>
       <object>objects\player_menu</object>
       <object>objects\player_settings</object>
     </objects>

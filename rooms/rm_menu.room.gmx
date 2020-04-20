@@ -53,18 +53,15 @@
   <instances>
     <instance objName="player_menu" x="224" y="128" name="inst_0C20BCE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="alert" x="288" y="160" name="inst_E71DAAFD" locked="0" code="text = &quot;exit&quot;;&#xA;horient = &quot;right&quot;;&#xA;vorient = &quot;up&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="alert" x="256" y="128" name="inst_B9B45B03" locked="0" code="text = &quot;help&quot;;&#xA;horient = &quot;left&quot;;&#xA;vorient = &quot;down&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="alert" x="320" y="128" name="inst_706F3AE3" locked="0" code="text = &quot;play&quot;;&#xA;horient = &quot;left&quot;;&#xA;vorient = &quot;down&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="alert" x="288" y="128" name="inst_B30DACDE" locked="0" code="horient = &quot;left&quot;;&#xA;vorient = &quot;down&quot;;&#xA;text = &quot;   W# ASD&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="btn_exit" x="288" y="192" name="inst_2810C872" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="btn_next" x="352" y="128" name="inst_E1763D00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="surface_controller_room_start" x="0" y="0" name="inst_6421B279" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="btn_settings" x="224" y="128" name="inst_D9039743" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="352" y="128" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_303BAC4C" depth="-2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background0" x="288" y="192" w="32" h="32" xo="0" yo="32" id="10000002" name="inst_BC8A8050" depth="-2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="background0" x="224" y="128" w="32" h="32" xo="32" yo="0" id="10000003" name="inst_E4BB1DC8" depth="-2" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

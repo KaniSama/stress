@@ -64,7 +64,7 @@ i = string_length(text);
             i--;
             i = clamp(i, 1, string_length(text));
         }
-    } else {
+    } 
         if (keyboard_check_pressed(ord('D'))) {
             with (player) {
                 //sprite_index = S_player_tool;
@@ -75,7 +75,6 @@ i = string_length(text);
                 bucket = false;
             }
         }   
-    }
 }
 else {
     image_index = 0;

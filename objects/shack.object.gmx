@@ -64,17 +64,15 @@ i = 1;
             i++;
             i = clamp(i, 1, string_length(text));
         }
-    } else {
-        if (keyboard_check_pressed(ord('A'))) {
-            with (player) {
-                //sprite_index = S_player_tool;
-                x = shack.x + CELL_W div 3;
+    } 
+    if (keyboard_check_pressed(ord('A'))) {
+        with (player) {
+            x = shack.x + CELL_W div 3;
                 
-                tool = true;
-                knife = false;
-                bucket = false;
-            }
-        }   
+            tool = true;
+            knife = false;
+            bucket = false;
+        }
     }
 }
 else {

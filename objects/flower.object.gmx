@@ -150,14 +150,23 @@ alarm[0] = 60 * room_speed;
 if (hp &lt;= 0) {
     player.visible = false;
     
+    player.interactible = false;
+    
     player.x = x;
     player.y = y;
+    
+    player.xx = player.n-1;
+    player.yy = player.n-1;
+    
+    //instance_deactivate_object(player);
     
     instance_create(x, y, surface_controller_room_end_stop);
     
     if (alarm[10] &lt;= 0)
-        alarm[10] = 60;
+        alarm[10] = 120;
 }
+
+hp = clamp(hp, 0, max_hp);
 </string>
           </argument>
         </arguments>
@@ -180,13 +189,15 @@ if (hp &lt;= 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>//draw_self();
+
+offset = hp / max_hp;
 
 draw_set_color(c_black);
 draw_rectangle(x, y + CELL_H, x + CELL_W, y + CELL_H + 5, false);
 
 draw_set_color(c_lime);
-draw_rectangle(x, y + CELL_H, x + CELL_W * (hp / max_hp), y + CELL_H + 5, false);
+draw_rectangle(x, y + CELL_H, x + CELL_W * offset, y + CELL_H + 5, false);
 
 draw_set_color(c_white);
 
@@ -195,6 +206,20 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_bottom);
 draw_text(room_width / 2, room_height - 12, "stage " + string(stage));
 draw_text(room_width / 2, room_height - 32, string(alarm[0]));
+
+draw_set_blend_mode(bm_add);
+draw_set_color(c_orange);
+draw_set_alpha(.12 * offset);
+draw_circle(x + 15, y + 14, (18 + random_range(-.3, .3)) * offset, false);
+draw_circle(x + 15, y + 14, (24 + random_range(-.3, .3)) * offset, false);
+
+draw_set_blend_mode(bm_normal);
+draw_set_color(c_white);
+draw_set_alpha(1);
+
+draw_sprite_ext(S_flower, 0, x, y, 1, 1, 0, make_colour_rgb((255 * offset), (255 * offset), (255 * offset)), 1);
+
+draw_text_colour(room_width div 2, room_height div 2, "it's withering...", c_black, c_black, c_black, c_black, .5 - offset);
 </string>
           </argument>
         </arguments>
