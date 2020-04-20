@@ -94,9 +94,9 @@ else if (state == "attacking")
     y = yprevious;
 else if (state == "stalking") {
     if (y &lt;= flower.y)
-        y += spd;
+        y += spd * 4;
     else
-        x += spd;
+        x += spd * 2;
 }
 </string>
           </argument>
