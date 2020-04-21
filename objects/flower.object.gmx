@@ -160,7 +160,8 @@ if (hp &lt;= 0) {
     
     //instance_deactivate_object(player);
     
-    instance_create(x, y, surface_controller_room_end_stop);
+    if (!instance_exists(surface_controller_room_end_stop))
+        instance_create(x, y, surface_controller_room_end_stop);
     
     if (alarm[10] &lt;= 0)
         alarm[10] = 120;
